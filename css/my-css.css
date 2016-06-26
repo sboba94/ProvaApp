@@ -1,0 +1,42 @@
+#blueline{
+  float: right;
+  width: 100%;
+  height: 2px;
+  background-color: #073480;
+}
+
+.imageCentre{
+	margin-right: 90px;
+	margin-left: 90px;
+	border: 2px solid black;
+}
+
+@media (min-width: 768px){
+	#right-align{
+		float: right;
+	}
+}
+.whiteText{
+  color: #fff;
+}
+
+.blue-background{
+	margin-right: 2px;
+	background-color: #073480;
+}
+
+.red-background{
+	margin-right: 2px;
+	background-color: #D3001F;
+}
+
+.blank-spacing{
+	height: 120px;
+	width: 100%;
+}
+.main-image {
+  border: 1px solid #073480;
+  margin-bottom: 10px;
+  max-width: 100%;
+  max-height: 100%;
+}
