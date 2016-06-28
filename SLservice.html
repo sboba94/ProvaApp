@@ -5,23 +5,38 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tim - Mobile Assistance Services</title>
+<title>Tim - SL service</title>
 <!-- Fogli di stile -->
 <link href="http://fonts.googleapis.com/css?" family="Lato:400,700,900,400italic" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css">
 <link rel="stylesheet" href="plugins/flexslider/flexslider.css">
 <link rel="stylesheet" href="css/stili-custom.css">
 <link rel="stylesheet" href="css/my-css.css">
-<link rel="stylesheet" href="css/Collapse filter.css">
-<link rel="stylesheet" href="css/offcanvas.css">
-    
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/mobile.js" type="text/javascript"></script>
-<script src="js/Collapse filter.js" type="text/javascript"></script>    
 
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/small_tim.js" type="text/javascript"></script>
+<script src="js/sl.js" type="text/javascript"></script>
 </head>
+
+<!--    < ?php
+// SERVE PER EFFETTUARE UNA CONNESSIONE AL DATABASE
+//$mysqli = new mysqli('localhost','root','','my_carminatibartoli');
+$mysqli = mysqli_connect('localhost','root','','my_carminatibartoli');
+if ($mysqli->connect_error) {
+    echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
+    exit(); //do nothing else 
+} else {
+	$query = "SELECT * FROM SL_Service WHERE Servizio='".$_GET['Servizio']."'";
+    $result = $mysqli->query($query);
+    //if there are data available
+    $row = mysqli_fetch_row($result);
+    //echo json_encode($row);
+    //close connection
+    $mysqli->close();
+}
+?>
+-->
 <body>
 <!-- Header e barra di navigazione -->
 <header>
@@ -55,55 +70,44 @@
 </header><!-- /header -->
 
 <div class="container">
+<div class="col-sm-4 col-md-4">
+    <!-- immagine -->
 
-      <div class="row row-offcanvas row-offcanvas-right">
-          
-          <!------------------- DISPOSITIVI ----------------->
-        <div class="col-xs-12 col-sm-12">
-          <div id="service" class="row">
-            <div class='col-xs-12 col-sm-12 '>
-               <div class='main-image'>
-                   <div class='container-offcanvas'>
-                        <a href='AssistanceService.php?Servizio=Ricarica'>
-                            <br>
-                            <h2><font color='#073480'>Ricarica aaa</font></h2>
-                            <br>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class='col-xs-12 col-sm-12 '>
-               <div class='main-image'>
-                   <div class='container-offcanvas'>
-                        <a href='AssistanceService.php?Servizio=LoSai'>
-                            <br>
-                            <h2><font color='#073480'>LoSai</font></h2>
-                            <br>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class='col-xs-12 col-sm-12 '>
-               <div class='main-image'>
-                   <div class='container-offcanvas'>
-                        <a href='AssistanceService.php?Servizio=ChiamaOra'>
-                            <br>
-                            <h2><font color='#073480'>ChiamaOra</font></h2>
-                            <br>
-                        </a>
-                    </div>
-                </div>
-            </div>
-          </div><!--/row-->
-        </div><!--/span-->
-          <!------------------- /DISPOSITIVI ----------------->
-        
-      </div><!--/row-->
-
-      <hr>
-
-</div><!--/.container-->    
+</div>
+<div class="col-sm-8 col-md-8">
+  <h2><font class="servizio" color="#073480"><!-- servizio --></font></h2>
+  <h2><font class="prezzo" color="#D3001F"><!-- costo --></font></h2>
+  <br>
+  	<h6><font color="#073480">Descrizione</font></h6>
+    <p class="description">
+  	<!-- descrizione -->
+    </p>
+  	<br>
+</div>
+<br>
     
+    
+    
+<div class="col-sx-12 col-md-12">
+	<h5><font color="#073480">Dispositivi che possono usare il servizio</font></h5>
+	<div id="blueline"></div>
+    <br>
+</div>
+<div class="col-sx-12 col-sm-12">
+	<div id="device" class="row" >
+    	<div class="col-sx-2 col-sm-2">
+        		<img class="main-image" src="images/HuaweiP9.jpg" alt=""/>
+        </div>
+        <div class="col-sx-2 col-sm-2">
+        		<img class="main-image" src="images/HuaweiP9.jpg" alt=""/>
+        </div>
+        <div class="col-sx-2 col-sm-2">
+        		<img class="main-image" src="images/HuaweiP9.jpg" alt=""/>
+        </div>
+    </div>
+</div>
+</div>    
+
 <!-- footer -->
 <div class="container">
 <div class="blank-spacing"></div>
@@ -112,7 +116,10 @@
         <span class="text-muted">@Carminati-Bartoli all rights reserved</span>
       </div>
  </footer>
- </div>
+ </div>    
+    
+    
+    
 <!-- jQuery e plugin JavaScript  -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
