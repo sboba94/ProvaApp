@@ -3,7 +3,7 @@ function ready() {
         method: "GET",
         dataType: "json", //type of data
         crossDomain: true, //perche in locale
-        url: "php/tim.php", //Relative or absolute path to file.php file
+        url: "http://carminatibartoli.altervista.org/php/tim.php", //Relative or absolute path to file.php file
         success: function (response) {
             
             var marca = getUrlVars()["marca"];
@@ -33,7 +33,7 @@ function ready() {
                                     "<img src='images/"+response[i].Foto+".png' style='display:block; margin-left:auto; margin-right:auto; max-height:90%;     max-width:90%' alt='' class='images-offcanvas'>"+
                                     "<h2><font color='#D3001F'>"+response[i].Costo+"€</font></h2>"+
                                     "<p class='col-sm-12'>"+
-                                        "<a class='btn btn-secondary' href='Device.php?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
+                                        "<a class='btn btn-secondary' href='Device.html?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
                                     "</p>"+
                                 "</div>"+
                             "</div>"+
@@ -51,7 +51,7 @@ function ready() {
                                     "<img src='images/"+response[i].Foto+".png' style='display:block; margin-left:auto; margin-right:auto; max-height:90%;     max-width:90%' alt='' class='images-offcanvas'>"+
                                     "<h2><font color='#D3001F'>"+response[i].Costo+"€</font></h2>"+
                                     "<p class='col-sm-12'>"+
-                                        "<a class='btn btn-secondary' href='Device.php?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
+                                        "<a class='btn btn-secondary' href='Device.html?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
                                     "</p>"+
                                 "</div>"+
                             "</div>"+
@@ -69,7 +69,7 @@ function ready() {
                                     "<img src='images/"+response[i].Foto+".png' style='display:block; margin-left:auto; margin-right:auto; max-height:90%;     max-width:90%' alt='' class='images-offcanvas'>"+
                                     "<h2><font color='#D3001F'>"+response[i].Costo+"€</font></h2>"+
                                     "<p class='col-sm-12'>"+
-                                        "<a class='btn btn-secondary' href='Device.php?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
+                                        "<a class='btn btn-secondary' href='Device.html?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
                                     "</p>"+
                                 "</div>"+
                             "</div>"+
@@ -87,7 +87,7 @@ function ready() {
                                     "<img src='images/"+response[i].Foto+".png' style='display:block; margin-left:auto; margin-right:auto; max-height:90%;     max-width:90%' alt='' class='images-offcanvas'>"+
                                     "<h2><font color='#D3001F'>"+response[i].Costo+"€</font></h2>"+
                                     "<p class='col-sm-12'>"+
-                                        "<a class='btn btn-secondary' href='Device.php?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
+                                        "<a class='btn btn-secondary' href='Device.html?Marca="+response[i].Marca+"&Modello="+response[i].Modello+"' role='button'>View details »</a> "+
                                     "</p>"+
                                 "</div>"+
                             "</div>"+
