@@ -2,7 +2,7 @@
 
 <widget>
    
-   <name>Tutorials Point</name>
+   <name>App Prova1</name>
    
    <description>
       Tutorials Point Online Viewer
@@ -11,5 +11,9 @@
    <author href = "http://tutorialspoint.com" email = "contact@tutorialspoint.com">
       Tutorials Point
    </author>
+   
+   <plugin name="cordova-plugin-whitelist" />
+   <access origin="*" />
+   <allow-intent href="*" />
    
 </widget>
