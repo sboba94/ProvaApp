@@ -3,7 +3,7 @@ function ready() {
         method: "GET",
         dataType: "json", //type of data
         crossDomain: true, //perche in locale
-        url: "php/service.php", //Relative or absolute path to file.php file
+        url: "http://carminatibartoli.altervista.org/php/service.php", //Relative or absolute path to file.php file
         success: function (response) {
             //var smartphones = JSON.parse(response);
             var output = "";
@@ -11,9 +11,9 @@ function ready() {
             for (i = 0; i<response.length;i++){
                 
                 output+="<div class='col-xs-12 col-sm-12 '>"+
-            	           "<div class='main-image' style='max-height:80%; max-width:80%'>"+
+            	           "<div class='main-image' style='max-height:100%; max-width:100%'>"+
             	               "<div class='container-offcanvas'>"+
-                                    "<a href='SLService.php?Servizio="+response[i].Servizio+"'>"+
+                                    "<a href='SLservice.html?Servizio="+response[i].Servizio+"'>"+
                                     "<img src='images/"+response[i].Immagine+".jpg' style='display:block; margin-left:auto; margin-right:auto; max-height:100%; max-width:100%' alt='' class='images-offcanvas'>"+
                                     "</a>"+
                                  "<h2><font color='#D3001F'>"+response[i].Costo+"€/mese</font></h2>"+

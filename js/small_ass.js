@@ -10,18 +10,20 @@ function ready() {
             var i;
             for (i = 0; i<response.length;i++){
                 
-                output+="<div class='col-xs-12 col-sm-12 '>"+
-            	           "<div class='main-image'>"+
-            	               "<div class='container-offcanvas'>"+
-                                    "<a href='AssistanceService.html?Servizio="+response[i].Servizio+"'>"+
-                                        "<br><h2><font color='#073480'>"+response[i].Servizio+"</font></h2><br>"+
-                                    "</a>"+
-                                "</div>"+
-                            "</div>"+
-                        "</div>";
+                output+="<div class='col-sx-4 col-sm-4'>"+
+        					"<div class='main-image'>"+
+                   				"<div class='container-offcanvas'>"+
+                       				"<a href='AssistanceService.html?Servizio="+response[i].Servizio+"'>"+
+                            		"<br>"+
+                            		"<h3><font color='#073480'>"+response[i].Servizio+"</font></h3>"+
+                            		"<br>"+
+                        			"</a>"+
+                    			"</div>"+
+                			"</div>"+
+        				"</div>";
                 
             }
-            document.getElementById("service").innerHTML = output;
+            document.getElementById("service_ass").innerHTML = output;
             //document.getElementById("elements").innerHTML = output;
             //$("body").html(output);
         },
