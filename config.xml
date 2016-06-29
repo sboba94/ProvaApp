@@ -2,14 +2,14 @@
 
 <widget>
    
-   <name>App Prova1</name>
+   <name>CarminatiBartoli</name>
    
    <description>
-      Tutorials Point Online Viewer
+      Hypermedia Project 2016 - Tim
    </description>
    
-   <author href = "http://tutorialspoint.com" email = "contact@tutorialspoint.com">
-      Tutorials Point
+   <author>
+      CarminatiBartoli
    </author>
    
    <plugin name="cordova-plugin-whitelist" />
