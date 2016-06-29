@@ -1,5 +1,6 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
+header('Content-type: text/html; charset=utf-8');
 // SERVE PER EFFETTUARE UNA CONNESSIONE AL DATABASE
 $mysqli = new mysqli('localhost', 'carminatibartoli','', 'my_carminatibartoli');
 

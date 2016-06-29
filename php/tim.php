@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+header('Content-type: text/html; charset=utf-8');
 // SERVE PER EFFETTUARE UNA CONNESSIONE AL DATABASE
 $mysqli = new mysqli('localhost', 'carminatibartoli','', 'my_carminatibartoli');
 
@@ -10,16 +12,6 @@ if ($mysqli->connect_error) {
     
     $query = "SELECT * FROM SmartPhone ORDER BY Costo";
     
-    if ( $_GET['prezzo'] != NULL && $_GET['marca'] !=NULL ) {
-        $query = "SELECT * FROM SmartPhone WHERE Costo<'".$_GET['prezzo']."' AND Marca='".$_GET['marca']."'";
-    }
-    elseif ($_GET['prezzo']!=NULL) {
-        $query = "SELECT * FROM SmartPhone WHERE Costo<'".$_GET['prezzo']."'";
-    }
-    elseif ($_GET['marca']!=NULL) {
-        $query = "SELECT * FROM SmartPhone WHERE Marca='".$_GET['marca']."'";
-    }
-
     $result = $mysqli->query($query);
     //if there are data available
     

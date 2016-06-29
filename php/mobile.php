@@ -1,5 +1,6 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
+header('Content-type: text/html; charset=utf-8');
 // SERVE PER EFFETTUARE UNA CONNESSIONE AL DATABASE
 $mysqli = new mysqli('localhost', 'carminatibartoli','', 'my_carminatibartoli');
 
@@ -9,7 +10,8 @@ if ($mysqli->connect_error) {
 } else {
     
     $query = "SELECT * FROM Assistance_Service";
-
+	
+    mysql_query('SET CHARACTER SET utf8');
     $result = $mysqli->query($query);
     //if there are data available
     
